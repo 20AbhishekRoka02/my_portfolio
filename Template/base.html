@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>RESPONSIVE PERSONAL PORTFOLIO WEBSITE </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    {% block styles %}{% endblock styles %}
+</head>
+
+<body>
+    {% block content %}{% endblock content %}
+    {% comment %} <header class="header">
+        <a href="#" class="logo">Hacker's Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello,It's Abhishek Roka</h3>
+            <h1>theN0madHacker</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <div class="social-media">
+                <a href="https://github.com/20AbhishekRoka02"><i class='bx bxl-github'></i></a>
+                <a href="mailto:then0madhacker@gmail.com"><i class='bx bxs-envelope'></i></a>
+                <a href="https://www.instagram.com/then0madhacker/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/abhishek-roka-bbb2b3232/"><i
+                        class='bx bxl-linkedin-square'></i></a>
+            </div>
+            <a href="C:\Users\shrey\Downloads\B.-Software-Engineer.docx" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="{% static 'image/avatar.jpeg' %}" style="border-radius: 10px;" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="https://wallpaperaccess.com/full/1385382.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About<span> Me</span></h2>
+            <h3>Full Stack Python Developer</h3>
+            <p>I've made projects in python for web as well as GUIs and these days working for Android Developement
+                using Flutter and Python. Have Good expreience in MySQL and SQLite. </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="heading">Our<span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>Motivated designer and developer
+                    with experience creating custom websites through PHP and CSS.
+                    Strong collaboration skills and proven history of application development. DHTML and JavaScript. MS
+                    Access and MySQL.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-crop'></i>
+                <h3>UI/UX Design</h3>
+                <p>You cannot make a good design if you do not understand people; design is made for people.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxl-instagram-alt'></i>
+                <h3>App Design</h3>
+                <p>I'm UI/UX Designer with a great passion to my work. The main goal is to create modern, attractive and
+                    user-friendly interfaces and find creative and simple solutions for your business.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest<span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="{% static 'image/jan-vlacuha-Rns_A8bJ_dQ-unsplash.jpg' %}" alt="">
+                <div class="portfolio-layer">
+                    <h4>Perssonal Portfolio</h4>
+                    <p>In this project I try making my own portfolio website for myself. Showcase my projects, my social
+                        media handles, my experience on the website.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="{% static 'image/austin-poon-JO_S6ewBqAk-unsplash.jpg' %}" alt="">
+                <div class="portfolio-layer">
+                    <h4>dynamics website Deployment in AWS</h4>
+                    <p>In this project I try deployed dynamics website in AWS.so that we can add deleted the data by
+                        connecting to databases.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="{% static 'image/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg' %}" alt="">
+                <div class="portfolio-layer">
+                    <h4>Iris flower detection</h4>
+                    <p>In this project I try detect the iris flower type by using machine learning predication model.And
+                        deployed in streamlit python</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="{% static 'image/kevin-canlas-QYHehJ9Iovs-unsplash.jpg' %}" alt="">
+                <div class="portfolio-layer">
+                    <h4>trafic analysis </h4>
+                    <p>In this project I try analysis the traffic by using java.</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact<span>ME!</span></h2>
+
+        <form method="post" id="interestUser">
+
+            {% csrf_token %}
+            <div class="input-box">
+                <input type="text" id="fullname" name="fullname" minlength="4" maxlength="100" placeholder="Full Name">
+                <input type="email" id="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" id="text-message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+        <span id="message"></span>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by then0madhacker | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{% static 'script.js' %}" src="script.js"></script>
+    <script>
+        document.getElementById('interestUser').addEventListener('submit', (event) => {
+            event.preventDefault();
+            var msg = document.getElementById("message");
+            var endpoint = '{% url "addInterestUser" %}'
+            alert(endpoint);
+            var data = {
+                'fullname': document.getElementById("fullname").value,
+                'email': document.getElementById("email").value,
+                'subject': document.getElementById("subject").value,
+                'message': document.getElementById('text-message').value
+            }
+
+            fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken'),
+
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    // console.log('Your message sent successfully:', result);
+                    msg.style.color = "green";
+                    msg.innerHTML = 'Your message sent successfully!';
+                    // Handle the response from the server as needed
+                })
+                .catch(error => {
+                    msg.style.color = "red";
+                    msg.innerHTML = 'An Error occured while sending data!';
+                    // console.error('An Error occured while sending data:', error);
+                    // Handle errors
+                });
+
+
+        })
+
+        // Function to get CSRF token from cookies
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+    </script> {% endcomment %}
+
+</body>
+
+</html>

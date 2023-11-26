@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% load static %}
+{% block styles %}
+<style>
+    .btn{
+        cursor: pointer;
+    }
+
+</style>
+{% endblock styles %}
+{% block content %}
+
+
+<header class="header">
+    <a href="#" class="logo">Hacker's Portfolio</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, it's Abhishek Roka</h3>
+        <h1>The Nomad Hacker</h1>
+        <h3>And I'm a <span class="multiple-text"></span></h3>
+        <div class="social-media">
+            <a href="https://github.com/20AbhishekRoka02"><i class='bx bxl-github'></i></a>
+            <a href="mailto:then0madhacker@gmail.com"><i class='bx bxs-envelope'></i></a>
+            <a href="https://www.instagram.com/then0madhacker/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/abhishek-roka-bbb2b3232/"><i
+                    class='bx bxl-linkedin-square'></i></a>
+        </div>
+        <button class="btn dev-msg">See my CV</button>
+    </div>
+    <div class="home-img">
+        <img src="{% static 'image/avatar.jpeg' %}" style="border-radius: 10px;" alt="">
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="https://wallpaperaccess.com/full/1385382.jpg" alt="">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About<span> Me</span></h2>
+        <h3>Full Stack Python Developer</h3>
+        <p>I am an explorer, who loves to try out new things and create something useful, in day to day life. Like, this website to show case my portfolio 😊. I can also help you by creating your website, software and teaching you.</p>
+        <button  class="btn dev-msg">Read More</button>
+    </div>
+</section>
+<section class="services" id="services">
+    <h2 class="heading">Our<span>&nbsp;Services</span></h2>
+
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>Motivated designer and developer
+                with experience creating custom websites through Django, Nextjs, PHP, HTML and CSS.
+                Strong collaboration skills and proven history of application development. MySQL and SQLite.</p>
+            <button  class="btn dev-msg">Read More</button>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-crop'></i>
+            <h3>UI/UX Design</h3>
+            <p>Designing with help of Figma.</p>
+            <button class="btn dev-msg">Read More</button>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bxl-instagram-alt'></i>
+            <h3>App Design</h3>
+            <p>I make design in Figma with prototyping, and create GUI using Tkinter Python and Java. Web Apps are designed with help of HTML, CSS, JavaScript, BootStrap and Tailwind CSS. With backend in Django, NextJS and Firebase.
+            </p>
+            <button  class="btn dev-msg">Read More</button>
+        </div>
+    </div>
+</section>
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest<span>Project</span></h2>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="{% static 'image/jan-vlacuha-Rns_A8bJ_dQ-unsplash.jpg' %}" alt="">
+            <div class="portfolio-layer">
+                <h4>Perssonal Portfolio</h4>
+                <p>In this project I try making my own portfolio website for myself. Showcase my projects, my social
+                    media handles, my experience on the website. I made it with HTML, CSS, JavaScript, Django and Firebase.</p>
+                <a style="cursor: pointer;" href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="{% static 'image/austin-poon-JO_S6ewBqAk-unsplash.jpg' %}" alt="">
+            <div class="portfolio-layer">
+                <h4>Weather Forcast GUI</h4>
+                <p>In this project, I tried to make a GUI in which we can get Weather Forecast of any city around the globe my just typing its name.</p>
+                <a style="cursor: pointer;" href="https://github.com/20AbhishekRoka02/CODSOFT/tree/202883ab0e8336dd21b6fd8ebb60e0cc24d571b0/Task_4_WeatherForcasting" target="_blank"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="{% static 'image/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg' %}" alt="">
+            <div class="portfolio-layer">
+                <h4>Teacher's Register</h4>
+                <p>In this project, I made a GUI using Tkinter Python and MySQL, on which multiple teachers can create their account and manage attendance of their students at once, and get record in form of Excel file.</p>
+                <a style="cursor: pointer;" href="https://github.com/20AbhishekRoka02/TeachersRegisterByAbhishekRoka" target="_blank"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="{% static 'image/kevin-canlas-QYHehJ9Iovs-unsplash.jpg' %}" alt="">
+            <div class="portfolio-layer">
+                <h4>Traffic Management (IoT) </h4>
+                <p>In this project I try to create a Traffic Management system using Arduino and Raspberry Pi. This project simply handles traffic light as per traffic density and clears the road.</p>
+                <a style="cursor: pointer;" onclick="alert('This project is to be add soon.')"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <h2 class="heading">Contact<span>ME!</span></h2>
+
+
+    <form method="post" id="interestUser">
+
+        {% csrf_token %}
+        <div class="input-box">
+            <input type="text" id="fullname" name="fullname" minlength="4" maxlength="100" placeholder="Full Name">
+            <input type="email" id="email" name="email" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+            <input type="text" id="subject" name="subject" placeholder="Subject">
+        </div>
+        <textarea name="message" id="text-message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+    <span id="message"></span>
+</section>
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2023 by then0madhacker | All Rights Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="{% static 'script.js' %}" src="script.js"></script>
+<script>
+
+    document.getElementById('interestUser').addEventListener('submit', (event) => {
+        event.preventDefault();
+        var msg = document.getElementById("message");
+        var endpoint = '{% url "addInterestUser" %}'
+        
+        var data = {
+            'fullname': document.getElementById("fullname").value,
+            'email': document.getElementById("email").value,
+            'subject': document.getElementById("subject").value,
+            'message': document.getElementById('text-message').value
+        }
+
+        fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken'),
+
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(result => {
+                
+                msg.style.color = "green";
+                msg.innerHTML = 'Your message sent successfully!';
+                // Handle the response from the server as needed
+            })
+            .catch(error => {
+                msg.style.color = "red";
+                msg.innerHTML = 'An Error occured while sending data!';
+                
+            });
+
+
+    })
+
+    // Function to get CSRF token from cookies
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    var btnClassElements = document.getElementsByClassName('dev-msg');
+
+    for (var i=0; i< btnClassElements.length; i++){
+        btnClassElements[i].addEventListener('click', ()=>{alert("This feature is underdevelopment.")
+    });
+    }
+    
+
+</script>
+{% endblock content %}
+
