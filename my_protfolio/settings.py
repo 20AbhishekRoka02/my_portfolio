@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%$oq^aybg#@(bp-k%ox9u++0n&g6qn3a45%ky%wyw)yg=gb=n7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
 # Application definition
@@ -137,15 +137,15 @@ from firebase_admin import credentials
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Path to your Firebase credentials JSON file
-FIREBASE_CREDENTIALS_PATH = os.path.join(BASE_DIR, 'credentials/portfoliowebsite-b027a-firebase-adminsdk-udbij-d862e41a7d.json')
+FIREBASE_CREDENTIALS_PATH = os.path.join(BASE_DIR, 'credentials/secret.json')
 
 # Initialize Firebase Admin SDK
 cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
 firebase_admin.initialize_app(cred)
 
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
-DESCOPE_PROJECT_ID=os.getenv("DESCOPE_PROJECT_ID")
+# DESCOPE_PROJECT_ID=os.getenv("DESCOPE_PROJECT_ID")

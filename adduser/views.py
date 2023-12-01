@@ -2,7 +2,7 @@ from django.shortcuts import HttpResponse
 
 from django.http import JsonResponse
 import firebase_admin
-from firebase_admin import firestore
+from firebase_admin import firestore, auth
 import json
 
 def addInterestUser(request):
@@ -14,7 +14,7 @@ def addInterestUser(request):
 
             # Access data using keys
             fullname = data.get('fullname')
-            email = data.get('email')
+            email = auth.get_user(data.get('email')).email
             subject = data.get('subject')
             message = data.get('message')
 

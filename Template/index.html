@@ -119,23 +119,32 @@
     </div>
 </section>
 <section class="contact" id="contact">
-    <h2 class="heading">Contact<span>ME!</span></h2>
+    {% if request.COOKIES.uid %}
+        <h2 class="heading">Contact<span>ME!</span></h2>
+
+        <form method="post" id="interestUser">
+
+            {% csrf_token %}
+            <div class="input-box">
+                <input type="text" id="fullname" name="fullname" minlength="4" maxlength="100" placeholder="Full Name">
+                <!-- <input type="email" id="email" name="email" placeholder="Email Address"> -->
+            </div>
+            <div class="input-box">
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" id="text-message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+        <span id="message"></span>
+    {% else %}
+    <h2 class="heading">Wanna Contact<span>&nbsp;ME!</span></h2>
+    <p style="text-align: center;">
+        <a style="background-color: white; font-size: large; cursor: pointer; color: blue;" href="login/"><button>Let me know you first</button></a>
+
+    </p>
+    {% endif %}
 
 
-    <form method="post" id="interestUser">
-
-        {% csrf_token %}
-        <div class="input-box">
-            <input type="text" id="fullname" name="fullname" minlength="4" maxlength="100" placeholder="Full Name">
-            <input type="email" id="email" name="email" placeholder="Email Address">
-        </div>
-        <div class="input-box">
-            <input type="text" id="subject" name="subject" placeholder="Subject">
-        </div>
-        <textarea name="message" id="text-message" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
-    </form>
-    <span id="message"></span>
 </section>
 
 <footer class="footer">
@@ -158,9 +167,10 @@
         var msg = document.getElementById("message");
         var endpoint = '{% url "addInterestUser" %}'
         
+        // 'email': document.getElementById("email").value,
         var data = {
             'fullname': document.getElementById("fullname").value,
-            'email': document.getElementById("email").value,
+            'email': "{{request.COOKIES.uid}}",
             'subject': document.getElementById("subject").value,
             'message': document.getElementById('text-message').value
         }

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="text-align: center;">Log in</h1>
+<div style="display: flex; justify-content: center;">
+    <form style="max-width: 70rem; margin: 1rem auto; text-align: center; margin-bottom: 3rem;" id="loginform" action="" method="post">
+        {% csrf_token %}
+        <input style="width: 100%; padding: 1.5rem; font-size: 1.6rem;color: var(--text-color);background: var(--second-bg-color);border-radius: .8rem;margin: .7rem 0;width: 49%;"  type="email" name="email" id="email" placeholder="abc@example.com" required>
+        <input style="width: 100%; padding: 1.5rem;font-size: 1.6rem;color: var(--text-color);background: var(--second-bg-color);border-radius: .8rem;margin: .7rem 0; width: 49%;" type="password" name="pass" id="pass" placeholder="Password" required>
+
+        <button style="margin-top: 2rem;cursor: pointer;display: inline-block;padding: 1rem 2.8rem;background: var(--main-color);border-radius: 4rem;box-shadow: 0 0 1rem var(--main-color);font-size: 1.6rem;color: var(--second-bg-color);letter-spacing: .1rem;font-weight: 600;transition: .5s ease;" type="submit">Login</button>
+    </form>
+    <a id="no-account" style="color: white; font-size: medium;" href="/signup/">Don't have an account?</a>
+    
+    
+</div>
+<div style="display: flex; justify-content: center;">
+    <button style="color: blue; background-color: bisque; border-radius: 5px; cursor: pointer;" id="forgot" onclick="showContact()">Forgot Password?</button>
+</div>
+<p style="text-align: center; font-weight: bold; font-size: large;" id="maildev" hidden>Contact  <a href="mailto:then0madhacker@gmail.com">Developer</a></p>
+<p>
+    <a href="/" style="background-color: white; font-size: large; color: blue;">Go back to home page! </a>
+
+</p>
+
+
+<script>
+    function showContact() {
+        document.getElementById("loginform").hidden=true;
+        document.getElementById("forgot").hidden=true;
+        document.getElementById("no-account").hidden=true;
+        document.getElementById("maildev").hidden=false      
+    }
+    function getCookie(name) {
+        const cookies = document.cookie;
+        console.log(cookies);
+        
+    }
+    window.onload = getCookie('uid');
+</script>
+
+{% endblock content %}

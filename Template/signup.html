@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="text-align: center;">Sign Up</h1>
+<div style="display: flex; justify-content: center;">
+    <form action="" method="post">
+        {% csrf_token %}
+        <input style="width: 100%; padding: 1.5rem; font-size: 1.6rem;color: var(--text-color);background: var(--second-bg-color);border-radius: .8rem;margin: .7rem 0;width: 49%;"  type="email" name="email" id="email" placeholder="abc@example.com" required>
+        <input style="width: 100%; padding: 1.5rem;font-size: 1.6rem;color: var(--text-color);background: var(--second-bg-color);border-radius: .8rem;margin: .7rem 0; width: 49%;" type="password" name="pass" id="pass" placeholder="Password" required>
+
+        <button style="margin-top: 2rem;cursor: pointer;display: inline-block;padding: 1rem 2.8rem;background: var(--main-color);border-radius: 4rem;box-shadow: 0 0 1rem var(--main-color);font-size: 1.6rem;color: var(--second-bg-color);letter-spacing: .1rem;font-weight: 600;transition: .5s ease;" type="submit">Login</button>
+
+    </form>
+    <a style="color: white; font-size: medium;" href="/signup/">Don't have an account?</a>
+
+</div>
+
+
+{% endblock content %}
